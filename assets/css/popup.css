@@ -1,0 +1,150 @@
+/* Fundo escuro */
+#myPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(4px); /* efeito de vidro */
+}
+
+/* Conteúdo do popup */
+.popup-content {
+  background: rgba(255, 255, 255, 0.95);
+  color: #b5504c;
+  padding: 25px 30px;
+  border-radius: 16px;
+  max-width: 480px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  animation: fadeIn 0.35s ease-in-out;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+/* Título */
+.popup-content h2 {
+  margin: 0 0 15px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #b5504c;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Imagem do popup */
+#popup-image {
+  max-width: 320px;
+  max-height: 260px;
+  display: block;
+  margin: 0 auto 15px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Texto */
+.popup-content p {
+  line-height: 1.6em;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Botão moderno */
+.popup-btn {
+  background: linear-gradient(135deg, #b5504c, #d96a65);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.popup-btn:hover {
+  background: linear-gradient(135deg, #a0403d, #c85a55);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+.popup-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* Animação */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+ 
+/* Estrutura geral */
+.popup-content {
+  background: #fff;
+  padding: 25px 30px;   /* menos espaço interno */
+  border-radius: 16px;
+  max-width: 700px;     /* caixa mais estreita */
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  animation: fadeIn 0.35s ease-in-out;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+
+/* Título centralizado */
+#popup-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #b5504c;
+  text-align: center;
+  margin: 0;
+}
+
+/* Corpo em duas colunas */
+.popup-body {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Imagem */
+.popup-left img {
+  max-width: 300px;
+  max-height: 260px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Texto justificado */
+.popup-right {
+  flex: 1;
+  text-align: justify;
+}
+
+.popup-right p {
+  font-size: 1rem;
+  line-height: 1.6em;
+  color: #333;
+  margin: 0;
+}
+
+/* Botão centralizado */
+.popup-footer {
+  text-align: center;
+}

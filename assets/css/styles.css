@@ -1,0 +1,408 @@
+/* ==================================================
+   NEGRAM Theme - Redesigned based on Home.jpeg
+   ================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+/* ==================================================
+   1. VARIÁVEIS DE TEMA
+   ================================================== */
+:root {
+  --bg: #f3ebe8;
+  --paper: #ffffff;
+  --ink: #7d625c;
+  --muted: #7d625c;
+  --brand: #b5504c;
+  --brand-dark: #b5504c;
+  --accent: #f3f0ef;
+  --card: #f1e4df;
+  --line: #e4d4cf;
+  --radius: 22px;
+  --shadow: 0 6px 20px rgba(0, 0, 0, .08);
+  --text-light: #f6f3f2;
+  --overlay-dark: rgba(0, 0, 0, 0.5);
+}
+
+* { box-sizing: border-box; }
+
+/* Remove sublinhado de TODOS os links */
+a { text-decoration: none; }
+a:hover, a:focus, a:active { text-decoration: none; }
+
+/* ==================================================
+   2. BASE
+   ================================================== */
+html,
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: var(--ink);
+  background-color: var(--bg);
+  background-image: url('E:\\Negram\\SITE\\01_INÍCIO\\fundo.jpeg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  line-height: 1.6;
+}
+
+/* ==================================================
+   3. UTILITÁRIOS
+   ================================================== */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 18px; }
+.grid { display: grid; gap: 18px; }
+.grid.auto-fit { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+.grid.two { grid-template-columns: repeat(2, 1fr); }
+.grid.three { grid-template-columns: repeat(3, 1fr); }
+.center { text-align: center; }
+.hidden { display: none !important; }
+.round { border-radius: var(--radius); }
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .70rem 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--brand);
+  color: var(--brand);
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn.primary { background: var(--brand); color: #fff; }
+.btn.ghost { border-color: transparent; color: var(--brand); }
+
+/* Tags */
+.tag { display: inline-block; padding: .35rem .65rem; border-radius: 999px; background: var(--accent); color: var(--ink); font-weight: 600; font-size: .85rem; text-decoration: none; }
+
+/* ==================================================
+   4. HEADER
+   ================================================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 40;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: saturate(180%) blur(6px);
+}
+.navbar { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
+.brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; color: var(--ink); }
+.brand div { font-size: 0.8rem; font-weight: normal; line-height: 1.3; }
+.brand .logo-img { height: 62px; width: auto; }
+.nav { display: flex; gap: 14px; align-items: center; }
+.nav a { color: var(--ink); text-decoration: none; padding: 8px 10px; border-radius: 10px; font-weight: 600; }
+.nav a.active, .nav a:hover { background: var(--card); }
+.nav-actions { display: flex; gap: 10px; align-items: center; }
+.search { position: relative; }
+.search input { padding: .6rem .9rem; border-radius: 12px; border: 1px solid var(--line); background: #fff; min-width: 200px; }
+.menu-btn { display: none; border: 0; background: transparent; font-size: 1.6rem; }
+
+/* ==================================================
+   5. HERO
+   ================================================== */
+.hero { position: relative; border-radius: var(--radius); overflow: hidden; margin: 18px 0; min-height: 420px; background: #ddd; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--text-light); box-shadow: var(--shadow); }
+.hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero .overlay { position: absolute; inset: 0; background: var(--overlay-dark); }
+.hero .content { position: relative; padding: 28px; }
+.hero h1, .hero h2 { margin: 0; font-size: clamp(28px, 4vw, 48px); letter-spacing: .5px; text-transform: uppercase; }
+.hero p { max-width: 760px; margin: 12px auto 0; }
+.hero .tag { background-color: transparent; border: 1px solid var(--text-light); color: var(--text-light); font-weight: normal; text-decoration: none; }
+
+/* ==================================================
+   6. SEÇÕES
+   ================================================== */
+.section { padding: 30px 0; text-align: center; }
+.section h2, .section h3 { font-size: 1.5rem; letter-spacing: 2px; text-transform: uppercase; color: var(--brand); margin: 0 0 20px; }
+.section p { max-width: 800px; margin-left: auto; margin-right: auto; }
+
+/* ==================================================
+   7. GALERIA DE EQUIPE
+   ================================================== */
+.team-section { padding: 40px 0; background-color: transparent; }
+.team-carousel-wrapper { margin: 0 auto; max-width: 1200px; }
+.team-carousel-viewport { width: 100%; }
+.team-carousel-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding-block: 20px; }
+.team-card { flex: 0 1 calc(20% - 20px); min-width: 200px; background-color: var(--paper); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease; }
+.team-card:hover { transform: translateY(-5px); }
+.team-card img { width: 100%; height: 220px; object-fit: cover; object-position: center; filter: grayscale(100%); }
+.team-card-info { padding: 15px; }
+.team-card-info h4 { margin: 0 0 5px 0; color: var(--ink); font-size: 1rem; }
+.team-card-info p { font-size: 0.9rem; color: var(--muted); margin: 0; }
+
+/* Responsividade */
+@media (max-width: 1024px) { .team-card { flex-basis: calc(33.33% - 20px); } }
+@media (max-width: 768px) { .team-card { flex-basis: calc(50% - 20px); } }
+@media (max-width: 480px) { .team-card { flex-basis: 100%; } }
+
+/* ==================================================
+   8. CARDS
+   ================================================== */
+.card { background: linear-gradient(180deg, #fff, var(--card)); border-radius: 20px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); display: flex; flex-direction: column; min-height: 180px; text-align: left; }
+.card .thumb { height: 130px; background: #ddd; }
+.card .thumb img { width: 100%; height: 100%; object-fit: cover; }
+.card .body { padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1; }
+.card h4 { margin: 0; font-size: 1rem; line-height: 1.35; }
+.card .meta { font-size: .90rem; color: var(--muted); }
+.card .actions { margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* ==================================================
+   9. FOOTER
+   ================================================== */
+.site-footer { margin-top: 34px; background-image: url('E:\\Negram\\SITE\\01_INÍCIO\\Rodapé_site.jpeg'); background-size: cover; background-position: center; color: var(--text-light); position: relative; padding: 50px 0 30px; text-align: center; }
+.site-footer::before { content: ''; position: absolute; inset: 0; background-color: var(--brand-dark); opacity: 0.7; }
+.footer-inner { position: relative; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; align-items: flex-start; text-align: left; }
+.footer-col-left { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.footer-logo-circ { height: 120px; width: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; }
+.footer-col-left p { font-size: 0.9rem; line-height: 1.4; }
+.footer-col-center { display: flex; flex-direction: column; align-items: center; gap: 15px; }
+.footer-socials { display: flex; gap: 20px; }
+.footer-socials img { height: 30px; }
+.footer-contact { font-size: 0.8rem; line-height: 1.5; }
+.footer-contact strong { letter-spacing: 1px; }
+.footer-col-right { display: flex; justify-content: center; }
+.footer-logos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; align-items: center; }
+.footer-logos img { height: auto; width: 110px; filter: brightness(0) invert(1); }
+.footer-copyright { position: relative; margin-top: 40px; font-size: 0.8rem; opacity: 0.8; }
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .footer-inner { grid-template-columns: 1fr; text-align: center; }
+  .footer-col-left, .footer-col-center, .footer-col-right { align-items: center; }
+  .footer-logos { grid-template-columns: repeat(3, 1fr); justify-items: center; }
+}
+
+/* Navbar responsiva */
+@media (max-width: 900px) {
+  .nav { display: none; }
+  .menu-btn { display: block; }
+  .search input { min-width: 140px; }
+}
+
+/* ==================================================
+   10. SEÇÃO LINHAS DE PESQUISA
+   ================================================== */
+.research-lines-section { position: relative; padding: 60px 0; background-image: url('E:\\Negram\\SITE\\01_INÍCIO\\fundo.jpeg'); background-size: cover; background-position: center; background-attachment: fixed; }
+.research-lines-section h2 { color: var(--brand-dark); margin-bottom: 40px; }
+.research-lines-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; align-items: center; justify-content: center; min-height: 300px; }
+.line-item h4 { color: #f8f8f7; font-size: 1rem; font-weight: 600; text-transform: uppercase; line-height: 1.5; margin: 0; }
+.btn-link { display: inline-block; margin-top: 40px; color: var(--brand-dark); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; text-decoration: none; }
+.btn-link:hover { color: var(--brand); }
+
+/* ==================================================
+   11. SEÇÃO SOBRE O NEGRAM
+   ================================================== */
+.about-section { text-align: center; }
+.about-section h2 { font-family: 'athletic', 'Oswald', sans-serif; font-size: 3rem; font-weight: 700; letter-spacing: 2px; }
+.about-section p { text-align: justify; margin-bottom: 25px; }
+.hero .tag { background-color: transparent; border: 1px solid var(--text-light); color: var(--text-light); font-weight: normal; text-decoration: none; }
+
+/* ==================================================
+   12. PÁGINA DA BIBLIOTECA
+   ================================================== */
+.library-header { text-align: center; padding: 40px 0; }
+.library-header .back-btn { background-color: var(--card); border: 1px solid var(--line); margin-bottom: 20px; }
+.library-header h1 { font-family: 'Oswald', sans-serif; color: var(--ink); font-size: 2.5rem; letter-spacing: 4px; text-transform: uppercase; margin: 0 0 10px 0; }
+.library-header .subtitle { color: var(--muted); font-weight: 500; letter-spacing: 1px; margin-bottom: 30px; }
+.library-header .search-bar input { width: 100%; max-width: 450px; padding: 12px 20px; border-radius: 999px; border: 1px solid var(--line); background-color: var(--paper); font-size: 1rem; }
+.books-section { padding-bottom: 40px; }
+.books-section h2 { font-family: 'Oswald', sans-serif; color: var(--ink); font-size: 1.8rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 30px; border-bottom: 2px solid var(--line); padding-bottom: 15px; }
+.book-entry { display: flex; gap: 30px; align-items: flex-start; padding-bottom: 30px; margin-bottom: 30px; border-bottom: 1px solid var(--line); }
+.book-cover { flex-shrink: 0; width: 160px; }
+.book-cover img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+.book-details h3 { font-size: 1.6rem; line-height: 1.4; text-transform: uppercase; color: var(--ink); margin: 0 0 10px 0; }
+.book-details .meta { color: var(--muted); font-size: 1rem; margin-bottom: 20px; }
+.book-actions { display: flex; gap: 15px; margin-top: 10px; }
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .book-entry { flex-direction: column; align-items: center; text-align: center; }
+  .book-details { display: flex; flex-direction: column; align-items: center; }
+  .library-header h1 { font-size: 2rem; }
+  .books-section h2 { font-size: 1.5rem; text-align: center; }
+}
+.books-section .book-actions .btn { color: #b5504c; }
+
+/* ==================================================
+   13. SEÇÃO DE NOTÍCIAS EM DESTAQUE
+   ================================================== */
+.news-section {
+  padding: 40px 0;
+}
+
+.news-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.news-header h2 {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.news-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 70px;
+  height: 4px;
+  background-color: var(--brand);
+}
+
+.news-nav button {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--line);
+  background-color: transparent;
+  color: var(--ink);
+
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.news-nav button:hover {
+  background-color: var(--card);
+}
+
+.news-nav button:first-child {
+  margin-right: 8px;
+}
+
+/* Oculta a barra de rolagem mas permite a rolagem */
+.news-carousel-viewport {
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+.news-carousel-viewport::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+.news-carousel-container {
+  display: flex;
+  gap: 20px;
+}
+
+.news-card {
+  flex: 0 0 calc(25% - 15px); /* 4 cards por padrão */
+  min-width: 250px;
+  position: relative;
+  height: 380px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.news-card:hover img {
+    transform: scale(1.05);
+}
+
+.news-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.news-card-content {
+  padding: 20px;
+  color: var(--text-light);
+}
+
+.news-card-content .tag {
+  background-color: var(--brand);
+  color: var(--text-light);
+  font-size: 0.8rem;
+  margin-right: 10px;
+}
+
+.news-card-content .date {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.news-card-content h4 {
+  margin: 10px 0 0 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* Responsividade para o carrossel de notícias */
+@media (max-width: 1024px) {
+  .news-card { flex-basis: calc(33.33% - 14px); }
+}
+@media (max-width: 768px) {
+  .news-card { flex-basis: calc(50% - 10px); }
+}
+@media (max-width: 540px) {
+  .news-card { flex-basis: 80%; }
+  .news-carousel-viewport {
+    /* Adiciona snapping para melhor experiência mobile */
+    scroll-snap-type: x mandatory;
+  }
+  .news-card {
+    scroll-snap-align: center;
+  }
+}
+
+/* ==================================================
+   15. CORREÇÕES GERAIS DE LAYOUT
+   ================================================== */
+
+/* 1. Adiciona um espaçamento no topo do conteúdo principal 
+      para compensar a altura do menu fixo. */
+main.container {
+  padding-top: 100px; 
+}
+
+/* 2. Remove a cor azul dos links quando eles são usados em um card de projeto.
+      Isso faz com que o texto dentro do card use as cores definidas (h4 e p)
+      em vez da cor padrão de um link. */
+.projects-section a.card {
+  color: inherit; /* Herda a cor do texto do elemento pai, removendo o azul */
+  text-decoration: none; /* Garante que não haverá sublinhado */
+}
+
+/* --- Estilos para o cursor do carrossel de Destaques --- */
+
+/* Adiciona o cursor de "agarrar" para indicar que a área é arrastável */
+.news-carousel-viewport {
+  cursor: grab;
+  user-select: none; /* Impede que o texto seja selecionado durante o arrasto */
+}
+
+/* Muda o cursor para "agarrando" quando o usuário clica e arrasta */
+.news-carousel-viewport.grabbing {
+  cursor: grabbing;
+}
+
+/* NOVO: Mostra a "mãozinha" (cursor de ponteiro) ao passar o mouse sobre um card de notícia */
+.news-carousel-viewport .news-card {
+  cursor: pointer;
+}
