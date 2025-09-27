@@ -37,7 +37,7 @@ body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: var(--ink);
-  background: url('SITE/01_INÍCIO/fundo.jpg') no-repeat center center fixed;
+  background: url('SITE/01_INICIO/fundo.jpg') no-repeat center center fixed;
   background-size: cover;
   line-height: 1.6;
 }
@@ -263,3 +263,4 @@ body {
         margin: 0 auto;
     }
 }
+
