@@ -37,7 +37,7 @@ body {
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: var(--ink);
   background-color: var(--bg);
-  background-image: url('assets/img/fundo.jpeg');
+  background-image: url('SITE\\01_INÍCIO\\fundo.jpeg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -152,7 +152,7 @@ body {
 /* ==================================================
    9. FOOTER
    ================================================== */
-.site-footer { margin-top: 34px; background-image: url('https://drive.google.com/file/d/1oLxrlt44RflrTrF2yn_DE9HLIAlMzKk8/view?usp=drive_link'); background-size: cover; background-position: center; color: var(--text-light); position: relative; padding: 50px 0 30px; text-align: center; }
+.site-footer { margin-top: 34px; background-image: url('SITE\\01_INÍCIO\\Rodapé_site.jpeg'); background-size: cover; background-position: center; color: var(--text-light); position: relative; padding: 50px 0 30px; text-align: center; }
 .site-footer::before { content: ''; position: absolute; inset: 0; background-color: var(--brand-dark); opacity: 0.7; }
 .footer-inner { position: relative; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; align-items: flex-start; text-align: left; }
 .footer-col-left { display: flex; flex-direction: column; align-items: center; text-align: center; }
@@ -185,7 +185,7 @@ body {
 /* ==================================================
    10. SEÇÃO LINHAS DE PESQUISA
    ================================================== */
-.research-lines-section { position: relative; padding: 60px 0; background-image: url('assets/img/fundo.jpeg'); background-size: cover; background-position: center; background-attachment: fixed; }
+.research-lines-section { position: relative; padding: 60px 0; background-image: url('SITE\\01_INÍCIO\\fundo.jpeg'); background-size: cover; background-position: center; background-attachment: fixed; }
 .research-lines-section h2 { color: var(--brand-dark); margin-bottom: 40px; }
 .research-lines-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; align-items: center; justify-content: center; min-height: 300px; }
 .line-item h4 { color: #f8f8f7; font-size: 1rem; font-weight: 600; text-transform: uppercase; line-height: 1.5; margin: 0; }
