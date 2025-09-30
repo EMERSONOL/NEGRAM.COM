@@ -406,3 +406,124 @@ main.container {
 .news-carousel-viewport .news-card {
   cursor: pointer;
 }
+
+/* ==================================================
+   ESTILOS ESPECÍFICOS PARA A PÁGINA "SOBRE"
+   ================================================== */
+
+.presentation-section, .equipe-section {
+    background-color: transparent;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: none;
+}
+
+.section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-align: center;
+    margin: 0 auto 40px auto;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 15px;
+    max-width: 400px;
+}
+
+/* --- Layout da Apresentação --- */
+.presentation-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.presentation-grid .text-column p {
+    text-align: justify;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.presentation-grid .image-column img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius); /* Usa o raio de borda global */
+}
+
+/* --- Layout da Equipe --- */
+.equipe-list {
+    display: grid;
+    grid-template-columns: 1fr; /* Lista de uma coluna */
+    gap: 25px;
+}
+
+.equipe-member {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background-color: transparent;
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.equipe-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-color: var(--brand);
+}
+
+.equipe-member-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--paper);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+
+.equipe-member-details h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+}
+
+.equipe-member-details .role {
+    font-weight: 700;
+    color: var(--brand);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 10px 0;
+}
+
+.equipe-member-details p {
+    margin: 0 0 15px 0;
+    font-size: 0.95rem;
+}
+
+/* --- Responsividade para a página "Sobre" --- */
+@media (max-width: 768px) {
+    .presentation-grid {
+        grid-template-columns: 1fr;
+    }
+    .image-column {
+        order: -1; /* Coloca a imagem no topo */
+        margin-bottom: 20px;
+    }
+    .presentation-section, .equipe-section {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .equipe-member {
+        flex-direction: column; /* Empilha foto e texto */
+        text-align: center;
+    }
+    .equipe-member-details .btn {
+        margin: 0 auto;
+    }
+}
