@@ -1,48 +1,32 @@
 <!doctype html>
 <html lang="pt-br">
 
-<!-- ==================================================
-     1. HEAD - Metadados e Importações
-     ================================================== -->
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NEGRAM</title>
+  <title>Biblioteca • NEGRAM</title>
 
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/carrossel.css" />
   <link rel="stylesheet" href="assets/css/popup.css" />
-</head>
 
-<body>
-
-<style>
-  /* ==================================================
-     ESTILOS DIRETAMENTE NO HTML
-     ================================================== */
-
-  /* 1. ESTILO DO FUNDO DA PÁGINA */
+  <style>
+  /* Estilos do fundo e rodapé aplicados diretamente */
   body {
-    /* IMPORTANTE: O caminho agora parte do index.html, então usamos 'assets/img/' */
     background-image: url('assets/img/fundo.jpg');
-    background-size: cover; /* Faz a imagem cobrir toda a área */
-    background-repeat: no-repeat; /* Impede que a imagem se repita */
-    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
-    background-position: center; /* Centraliza a imagem */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
   }
-
-  /* 2. ESTILO DO RODAPÉ */
   .site-footer {
-    /* IMPORTANTE: O caminho também parte do index.html */
     background-image: url('assets/img/Rodape.jpg');
     background-size: cover;
     background-position: center;
-    color: #f6f3f2; /* Cor do texto no rodapé (branco) */
-    position: relative; /* Necessário para a sobreposição de cor funcionar */
+    color: #f6f3f2;
+    position: relative;
   }
-
-  /* Sobreposição de cor escura sobre a imagem do rodapé */
   .site-footer::before {
     content: '';
     position: absolute;
@@ -50,25 +34,21 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #b5504c; /* Cor da sobreposição (o tom avermelhado do tema) */
-    opacity: 0.7; /* Transparência da sobreposição (ajuste entre 0 e 1) */
+    background-color: #b5504c;
+    opacity: 0.7;
   }
-</style>
-     
+  </style>
 
-<!-- ==================================================
-     2. HEADER - Menu Superior e Navegação
-     ================================================== -->    
+</head>
+
+<body>
+
 <header class="site-header">
   <div class="container navbar">
-
-    <!-- Logo e Nome do NEGRAM -->
     <a class="brand" href="index.html" aria-label="Página inicial">
-      <img src="assets\img\logo negram sf.png" alt="Logo NEGRAM" class="logo-img" />
+      <img src="assets/img/logo negram sf.png" alt="Logo NEGRAM" class="logo-img" />
       <div>Núcleo de Estudos e<br />Pesquisas em Geografia,<br />Relações Raciais e<br />Movimentos Sociais</div>
     </a>
-
-    <!-- Links de Navegação -->
     <nav class="nav">
       <a href="index.html">Início</a>
       <a href="sobre.html">Sobre</a>
@@ -83,125 +63,93 @@
     </div>
   </div>
 </header>
-<main>
-<!-- ==================================================
-     3. Biblioteca
-     ================================================== -->
 
-<section class="hero round">
-  <img src="assets/img/Biblioteca.jpg" alt="Biblioteca"/>
-  <div class="overlay"></div>
-  <div class="content"><h2>Biblioteca</h2><p>Confira os materiais produzidos pelo núcleo.</p></div>
-</section>
+<main class="container">
 
-<section class="section">
-  <h3>Livros</h3>
-  <!doctype html>
-<html lang="pt-br">
+  <section class="hero round">
+    <img src="assets/img/Biblioteca.jpg" alt="Biblioteca"/>
+    <div class="overlay"></div>
+    <div class="content"><h2>Biblioteca</h2><p>Confira os materiais produzidos pelo núcleo.</p></div>
+  </section>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Biblioteca • NEGRAM</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
-</head>
-
-<body>
-
-  <main class="container">
-
-      <article class="book-entry">
-        <div class="book-cover">
-          <img src="assets/img/biblioteca/Capa/Miolo_Territorios Negros Patrimonio.jpg" alt="Capa do livro Territórios Negros">
+  <section class="section">
+    <h3>Livros</h3>
+    <article class="book-entry">
+      <div class="book-cover">
+        <img src="assets/img/biblioteca/Capa/Miolo_Territorios Negros Patrimonio.jpg" alt="Capa do livro Territórios Negros">
+      </div>
+      <div class="book-details">
+        <h3>TERRITÓRIOS NEGROS: Patrimônio e Educação na Pequena África</h3>
+        <div class="book-actions">
+          <a href="assets/img/caminho/para/seu-livro.pdf" class="btn ghost" download>BAIXAR</a><a href="#" class="btn ghost">SAIBA MAIS</a>
         </div>
-        <div class="book-details">
-          <h3>TERRITÓRIOS NEGROS: Patrimônio e Educação na Pequena África</h3>
-          <div class="book-actions">
-            <a href="assets/img/caminho/para/seu-livro.pdf" class="btn ghost" download>BAIXAR</a><a href="#" class="btn ghost">SAIBA MAIS</a>
-          </div>
+      </div>
+    </article>
+    <article class="book-entry">
+      <div class="book-cover">
+        <img src="assets/img/biblioteca/Capa/livro_pequena_africa.jpg" alt="Capa do livro Pequena África: lutas negras">
+      </div>
+      <div class="book-details">
+        <h3>Pequena África: lutas negras por memória contra o branqueamento do território no Centro do Rio de Janeiro</h3>
+        <p class="meta">| p. 206-218 | Renato Emerson dos Santos</p>
+        <div class="book-actions">
+          <a href="#" class="btn ghost">BAIXAR</a>
+          <a href="#" class="btn ghost">SAIBA MAIS</a>
         </div>
-      </article>
-      
-      <article class="book-entry">
-        <div class="book-cover">
-          <img src="assets/img/biblioteca/Capa/livro_pequena_africa.jpg" alt="Capa do livro Pequena África: lutas negras">
+      </div>
+    </article>
+    <article class="book-entry">
+      <div class="book-cover">
+        <img src="assets/img/biblioteca/Capa/Quem planeja o território.png" alt="Capa do livro Revisitando os repertórios espaciais">
+      </div>
+      <div class="book-details">
+        <h3>Revisitando os repertórios espaciais de ação na luta antirracismo: o caso da Pequena África no Rio de Janeiro.</h3>
+        <p class="meta">| p. 19-45 | Renato Emerson dos Santos</p>
+        <div class="book-actions">
+          <a href="#" class="btn ghost">BAIXAR</a>
+          <a href="#" class="btn ghost">SAIBA MAIS</a>
         </div>
-        <div class="book-details">
-          <h3>Pequena África: lutas negras por memória contra o branqueamento do território no Centro do Rio de Janeiro</h3>
-          <p class="meta">| p. 206-218 | Renato Emerson dos Santos</p>
-          <div class="book-actions">
-            <a href="#" class="btn ghost">BAIXAR</a>
-            <a href="#" class="btn ghost">SAIBA MAIS</a>
-          </div>
+      </div>
+    </article>
+    <article class="book-entry">
+      <div class="book-cover">
+        <img src="assets/img/biblioteca/Capa/livro_cartografias_conflito.jpg" alt="Capa do livro Repertórios espaciais de ação na luta antirracismo">
+      </div>
+      <div class="book-details">
+        <h3>Repertórios espaciais de ação na luta antirracismo: o caso da Pequena África no Rio de Janeiro.</h3>
+        <p class="meta">| p. 12-27. | Renato Emerson dos Santos</p>
+        <div class="book-actions">
+          <a href="#" class="btn ghost">BAIXAR</a>
+          <a href="#" class="btn ghost">SAIBA MAIS</a>
         </div>
-      </article>
+      </div>
+    </article>
+  </section>
 
-      <article class="book-entry">
-        <div class="book-cover">
-          <img src="assets/img/biblioteca/Capa/Quem planeja o território.png" alt="Capa do livro Revisitando os repertórios espaciais">
-        </div>
-        <div class="book-details">
-          <h3>Revisitando os repertórios espaciais de ação na luta antirracismo: o caso da Pequena África no Rio de Janeiro.</h3>
-           <p class="meta">| p. 19-45 | Renato Emerson dos Santos</p>
-          <div class="book-actions">
-            <a href="#" class="btn ghost">BAIXAR</a>
-            <a href="#" class="btn ghost">SAIBA MAIS</a>
-          </div>
-        </div>
-      </article>
-      
-      <article class="book-entry">
-        <div class="book-cover">
-          <img src="assets/img/biblioteca/Capa/livro_cartografias_conflito.jpg" alt="Capa do livro Repertórios espaciais de ação na luta antirracismo">
-        </div>
-        <div class="book-details">
-          <h3>Repertórios espaciais de ação na luta antirracismo: o caso da Pequena África no Rio de Janeiro.</h3>
-           <p class="meta">| p. 12-27. | Renato Emerson dos Santos</p>
-          <div class="book-actions">
-            <a href="#" class="btn ghost">BAIXAR</a>
-            <a href="#" class="btn ghost">SAIBA MAIS</a>
-          </div>
-        </div>
-      </article>
+  <section class="section">
+    <h3>Artigos</h3>
+    <p class="meta">Em breve.</p>
+  </section>
+  <section class="section">
+    <h3>Teses e Dissertações</h3>
+    <p class="meta">Em breve.</p>
+  </section>
+  <section class="section">
+    <h3>Revistas Científicas</h3>
+    <p class="meta">Em breve.</p>
+  </section>
 
-    </section>
-
-  </main>
-
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
-<section class="section">
-  <h3>Artigos</h3>
-  <p class="meta">Em breve.</p>
-</section>
-<section class="section">
-  <h3>Teses e Dissertações</h3>
-  <p class="meta">Em breve.</p>
-</section>
-<section class="section">
-  <h3>Revistas Científicas</h3>
-  <p class="meta">Em breve.</p>
-</section>
-
-<!-- ==================================================
-     4. FOOTER - Rodapé com informações de contato
-     ================================================== -->
 </main>
+
 <footer class="site-footer">
     <div class="container footer-inner">
-      <!-- Coluna Esquerda: Logo e Nome -->
       <div class="footer-col-left">
         <img src="assets/img/RODAPÉ/logo_negram.png" alt="Logo NEGRAM Rodapé" class="footer-logo-circ">
         <p>Núcleo de Estudos e Pesquisas em Geografia, Relações Raciais e Movimentos Sociais</p>
       </div>
-
-      <!-- Coluna Central: Contato e Copyright -->
       <div class="footer-col-center">
         <div class="footer-socials">
-          <!-- Link do Instagram Adicionado -->
           <a href="https://www.instagram.com/negram_ufrj" target="_blank" rel="noopener noreferrer"><img src="assets/img/RODAPÉ/logo instagram.png" alt="Instagram"></a>
-          <!-- Substitua # pelo seu endereço de email -->
           <a href="mailto:#"><img src="assets/img/RODAPÉ/logo email.png" alt="Email"></a>
         </div>
         <div class="footer-contact">
@@ -209,11 +157,8 @@
             <p>Av. Horácio Macedo, 2151 – Cidade Universitária –<br>Ilha do Fundão – CEP: 21941-917 – Rio de Janeiro –<br>RJ – Brasil</p>
         </div>
       </div>
-
-      <!-- Coluna Direita: Logos dos Patrocinadores -->
       <div class="footer-col-right">
         <div class="footer-logos">
-          <!-- Links dos Fornecedores Adicionados -->
           <a href="https://www.instagram.com/ufrj.oficial" target="_blank" rel="noopener noreferrer"><img src="assets/img/RODAPÉ/logo.png" alt="Logo UFRJ"></a>
           <a href="https://www.instagram.com/ippur.ufrj" target="_blank" rel="noopener noreferrer"><img src="assets/img/RODAPÉ/Logo-IPPUR-Sem-fundo branco.png" alt="Logo IPPUR"></a>
           <a href="https://www.instagram.com/ettern_ippur" target="_blank" rel="noopener noreferrer"><img src="assets/img/RODAPÉ/png ettern.png" alt="Logo ETTERN"></a>
@@ -224,18 +169,13 @@
       </div>
     </div>
     <p class="footer-copyright">© 2025 NEGRAM</p>
-  </footer>
+</footer>
 
 
-<!-- ==================================================
-     9. JAVASCRIPT - Scripts do site
-     ================================================== -->
-
-</main>
-
+<script src="assets/js/main.js"></script>
 <script src="assets/js/popup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="assets\js\carrossel.js"></script>
+<script src="assets/js/carrossel.js"></script>
 
 </body>
 </html>
