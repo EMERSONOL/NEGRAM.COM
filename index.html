@@ -17,6 +17,44 @@
 
 <body>
 
+<style>
+  /* ==================================================
+     ESTILOS DIRETAMENTE NO HTML
+     ================================================== */
+
+  /* 1. ESTILO DO FUNDO DA PÁGINA */
+  body {
+    /* IMPORTANTE: O caminho agora parte do index.html, então usamos 'assets/img/' */
+    background-image: url('assets/img/fundo.jpg');
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+    background-position: center; /* Centraliza a imagem */
+  }
+
+  /* 2. ESTILO DO RODAPÉ */
+  .site-footer {
+    /* IMPORTANTE: O caminho também parte do index.html */
+    background-image: url('assets/img/Rodape.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #f6f3f2; /* Cor do texto no rodapé (branco) */
+    position: relative; /* Necessário para a sobreposição de cor funcionar */
+  }
+
+  /* Sobreposição de cor escura sobre a imagem do rodapé */
+  .site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #b5504c; /* Cor da sobreposição (o tom avermelhado do tema) */
+    opacity: 0.7; /* Transparência da sobreposição (ajuste entre 0 e 1) */
+  }
+</style>
+     
 <!-- ==================================================
      2. HEADER - Menu Superior e Navegação
      ================================================== -->    
