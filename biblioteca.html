@@ -16,31 +16,62 @@
   <link rel="stylesheet" href="assets/css/popup.css" />
 
   <style>
-  /* Estilos do fundo e rodapé aplicados diretamente */
-  body {
-    background-image: url('assets/img/fundo.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-  }
-  .site-footer {
-    background-image: url('assets/img/Rodape.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #f6f3f2;
-    position: relative;
-  }
-  .site-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #b5504c;
-    opacity: 0.7;
-  }
+ <style>
+/* Estilos do fundo e rodapé aplicados diretamente */
+body {
+  background-image: url('assets/img/fundo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.site-footer {
+  background-image: url('assets/img/Rodape.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #f6f3f2;
+  position: relative;
+}
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #b5504c;
+  opacity: 0.7;
+}
+
+/* NOVOS ESTILOS PARA AJUSTAR O HERO DA BIBLIOTECA */
+/* Remove margens e arredondamento do hero para que a imagem ocupe toda a largura */
+.hero {
+  margin: 0; /* Remove margens externas que podem estar empurrando */
+  padding: 0; /* Remove preenchimento interno que pode estar reduzindo a área */
+  border-radius: 0; /* Remove qualquer arredondamento */
+  width: 100vw; /* Garante que ocupe a largura total da viewport (tela) */
+  max-width: none; /* Anula qualquer limite de largura máxima */
+  left: 50%; /* Posiciona o elemento no centro */
+  transform: translateX(-50%); /* Ajusta a posição para que o centro dele fique no centro da tela */
+  position: relative; /* Mantém o posicionamento relativo */
+}
+
+/* Ajusta a imagem dentro do hero para que ela preencha o espaço */
+.hero img {
+  border-radius: 0; /* Garante que a imagem em si não tenha bordas arredondadas */
+}
+
+/* Se houver um .container ao redor do hero, ele precisa ser ajustado ou o hero precisa estar fora dele */
+/* Se a seção hero estiver dentro de um div.container que limita a largura,
+   você pode precisar mover a seção hero para fora desse container
+   ou sobrescrever o container para este caso específico. */
+/* Para testar se o container está atrapalhando, adicione estas regras: */
+main > .container {
+  padding: 0; /* Remove o padding do container principal */
+  max-width: none; /* Remove a largura máxima do container principal */
+}
+
+</style>
   </style>
 
 </head>
