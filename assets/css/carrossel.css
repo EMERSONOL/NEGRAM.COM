@@ -15,7 +15,7 @@
   background-size: cover;
   width: 260px;
   height: 360px;
-  border-radius: 16px; /* Ajustado para combinar com outros elementos do site */
+  border-radius: 0px; /* Ajustado para combinar com outros elementos do site */
   overflow: hidden;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   border: 1px solid #e4d4cf; /* Usa a cor de linha do seu tema */
