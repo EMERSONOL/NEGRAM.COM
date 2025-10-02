@@ -1,20 +1,23 @@
-// Inicializa o Swiper com as configurações do efeito Coverflow
+// =======================================================
+// ===== CÓDIGO DO CARROSSEL DA EQUIPE (SWIPER) - ATUALIZADO =====
+// =======================================================
+
+// Inicializa o Swiper com as configurações para um carrossel lado a lado
 const swiper = new Swiper(".mySwiper", {
-  effect: "coverflow",      // Mantemos o "coverflow" pois ele controla o scaling do item central
+  // Efeito "coverflow" foi removido para obter o layout plano.
+  // O efeito padrão "slide" será usado.
+
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: "auto",    // Deixa o Swiper calcular quantos slides cabem na tela
+  slidesPerView: "auto",   // Mantém a visualização automática, que é ótima para responsividade.
   loop: true,
 
-  // Configurações específicas do efeito Coverflow ATUALIZADAS
-  coverflowEffect: {
-    rotate: 0,              // <<-- PONTO CHAVE: Remove a rotação 3D, deixando os slides "retos".
-    stretch: 40,            // <<-- Adiciona um espaçamento horizontal entre os slides. Ajuste se quiser mais ou menos espaço.
-    depth: 150,             // <<-- Aumenta a percepção de profundidade para o efeito de escala.
-    modifier: 1.2,          // <<-- Aumenta a diferença de tamanho entre o slide central e os laterais.
-    slideShadows: true,     // Mantém as sombras para dar uma sensação de profundidade.
-  },
-  
+  // ADICIONADO: Esta é a nova forma de controlar o espaço entre os cards.
+  // Ajuste o valor '30' conforme necessário.
+  spaceBetween: 30,
+
+  // O bloco "coverflowEffect" foi completamente REMOVIDO daqui.
+
   // Configura a paginação (bolinhas)
   pagination: {
     el: ".swiper-pagination",
@@ -22,8 +25,9 @@ const swiper = new Swiper(".mySwiper", {
   },
 });
 
+
 // =======================================================
-// ===== CÓDIGO DO CARROSSEL DE NOTÍCIAS EM DESTAQUE =====
+// ===== CÓDIGO DO CARROSSEL DE NOTÍCIAS (SEM ALTERAÇÃO) =====
 // =======================================================
 const newsViewport = document.querySelector('.news-carousel-viewport');
 
@@ -52,7 +56,7 @@ if (newsViewport) {
 
 
   // =======================================================
-  // ===== NOVO: FUNCIONALIDADE DE ARRASTO (DRAG) =====
+  // ===== FUNCIONALIDADE DE ARRASTO (DRAG) - SEM ALTERAÇÃO =====
   // =======================================================
   let isDown = false;
   let startX;
@@ -76,11 +80,10 @@ if (newsViewport) {
   });
 
   newsViewport.addEventListener('mousemove', (e) => {
-    if (!isDown) return; // Para a função se o mouse não estiver pressionado
-    e.preventDefault(); // Previne a seleção de texto e outros comportamentos padrão
+    if (!isDown) return;
+    e.preventDefault();
     const x = e.pageX - newsViewport.offsetLeft;
-    const walk = (x - startX) * 2; // O *2 torna o arrasto mais rápido
+    const walk = (x - startX) * 2;
     newsViewport.scrollLeft = scrollLeft - walk;
   });
-
 };
