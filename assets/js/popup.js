@@ -28,39 +28,32 @@ const popupData = {
 };
 
 function openPopup(key) {
-        // 1. Encontra os dados no dicionário usando a chave recebida
-        const data = popupData[key];
+  const data = popupData[key];
+  if (!data) return;
 
-        // 2. Verifica se os dados existem para evitar erros
-        if (!data) {
-            console.error("Dados do popup não encontrados para a chave:", key);
-            return;
-        }
+  document.getElementById("popup-title").innerText = data.title;
+  document.getElementById("popup-image").src = data.imageUrl;
+  document.getElementById("popup-description").innerText = data.description;
 
-        // 3. Preenche os elementos do pop-up genérico com os dados
-        document.getElementById('popup-title').innerText = data.title;
-        document.getElementById('popup-image').src = data.imageUrl;
-        document.getElementById('popup-description').innerText = data.description;
+  const popup = document.getElementById("myPopup");
+  popup.classList.add("popup-is-open");
+  document.body.classList.add("popup-active");
+}
 
-        // 4. Exibe o pop-up
-        document.getElementById('myPopup').style.display = 'flex';
-    }
+function closePopup() {
+  const popup = document.getElementById("myPopup");
+  popup.classList.remove("popup-is-open");
+  document.body.classList.remove("popup-active");
+}
 
-    function closePopup() {
-        document.getElementById('myPopup').style.display = 'none';
-    }
-    
-    // Adicione este código ao seu HTML, logo após o script do popup.js
-// Ele faz com que um clique no fundo escuro também feche a janela.
-document.getElementById('myPopup').addEventListener('click', function(event) {
-    if (event.target === this) {
-        closePopup();
-    }
-});
+document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("myPopup");
 
-// Adicione este código também, ele permite fechar com a tecla ESC.
-document.addEventListener('keydown', function(event) {
-    if (event.key === "Escape") {
-        closePopup();
-    }
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) closePopup();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closePopup();
+  });
 });
