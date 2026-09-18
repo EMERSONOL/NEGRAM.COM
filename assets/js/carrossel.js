@@ -74,6 +74,48 @@ function initCustomCarousel(viewportId, prevBtnId, nextBtnId) {
 }
 
 // =======================================================
+// ===== CÓDIGO DO CARROSSEL HERO (DESTAQUE INICIAL) =====
+// =======================================================
+let heroSlideAtual = 0;
+const heroSlides = document.querySelectorAll('.hero-slide');
+const heroDots = document.querySelectorAll('.hero-dot');
+
+function mostrarHeroSlide(index) {
+    // Se não existir o carrossel na página, não faz nada
+    if (!heroSlides.length) return; 
+
+    // Efeito de loop (se passar do último, volta pro primeiro)
+    if (index >= heroSlides.length) heroSlideAtual = 0;
+    if (index < 0) heroSlideAtual = heroSlides.length - 1;
+
+    // Remove as classes 'active'
+    heroSlides.forEach(slide => slide.classList.remove('active'));
+    heroDots.forEach(dot => dot.classList.remove('active'));
+
+    // Adiciona classe 'active' ao slide e dot atuais
+    heroSlides[heroSlideAtual].classList.add('active');
+    
+    if(heroDots[heroSlideAtual]) {
+        heroDots[heroSlideAtual].classList.add('active');
+    }
+}
+
+function mudarHeroSlide(direcao) {
+    heroSlideAtual += direcao;
+    mostrarHeroSlide(heroSlideAtual);
+}
+
+function irParaHeroSlide(index) {
+    if(index < heroSlides.length) {
+        heroSlideAtual = index;
+        mostrarHeroSlide(heroSlideAtual);
+    }
+}
+
+// Opcional: Para fazer o carrossel passar sozinho a cada 6 segundos, descomente a linha abaixo
+setInterval(() => { mudarHeroSlide(1); }, 6000);
+
+// =======================================================
 // ===== INICIALIZAÇÃO DOS CARROSSÉIS =====
 // =======================================================
 // Inicializa o carrossel de Projetos
