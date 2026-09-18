@@ -202,3 +202,90 @@
     .hero-slide { padding: 0 50px; }
     .hero-nav-btn { width: 35px; height: 35px; }
 }
+
+/* ==================================================
+   Estilos para o Carrossel tipo Instagram Stories
+   ================================================== */
+.stories-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.storiesSwiper {
+    width: 100%;
+    padding: 20px 0 50px 0;
+}
+
+/* Formato Vertical (9:16) do Story */
+.story-slide {
+    width: 270px;
+    height: 480px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    background-color: #000;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    
+    /* Borda Gradiente clássica do Instagram */
+    border: 3px solid transparent;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    
+    /* Necessário para o efeito coverflow funcionar bem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajuste do vídeo dentro do card */
+.story-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz o vídeo preencher todo o espaço sem distorcer */
+    display: block;
+    border-radius: 13px; /* Arredonda levemente o canto do vídeo para caber na borda */
+}
+
+/* Informações sobrepostas no vídeo (texto embaixo) */
+.story-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 20px 20px 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    color: #ffffff;
+    text-align: left;
+    z-index: 2;
+    border-radius: 0 0 13px 13px;
+}
+
+.story-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+.story-info p {
+    margin: 0;
+    font-size: 13px;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+/* Setas de navegação personalizadas */
+.stories-btn {
+    color: #C35B47 !important; /* Cor do tema NEGRAM */
+    background: rgba(255, 255, 255, 0.9);
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.stories-btn::after {
+    font-size: 20px !important;
+    font-weight: bold;
+}

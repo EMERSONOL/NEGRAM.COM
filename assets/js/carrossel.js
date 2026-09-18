@@ -123,3 +123,28 @@ initCustomCarousel('projects-viewport', 'projects-prev-btn', 'projects-next-btn'
 
 // Inicializa o carrossel de Eixos
 initCustomCarousel('eixos-viewport', 'eixos-prev-btn', 'eixos-next-btn');
+
+// =======================================================
+// ===== CÓDIGO DO CARROSSEL DE STORIES (INSTAGRAM STYLE) =====
+// =======================================================
+const storiesSwiper = new Swiper(".storiesSwiper", {
+    effect: "coverflow", 
+    grabCursor: true,
+    centeredSlides: true, 
+    slidesPerView: "auto",
+    loop: true,
+    spaceBetween: 30,
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2,
+        slideShadows: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    }
+    // Foi removida a função que pausava os vídeos. 
+    // Agora todos executarão ao mesmo tempo em loop!
+});
