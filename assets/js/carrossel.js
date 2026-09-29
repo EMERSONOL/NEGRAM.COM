@@ -151,3 +151,46 @@ const storiesSwiper = new Swiper(".storiesSwiper", {
     // Foi removida a função que pausava os vídeos. 
     // Agora todos executarão ao mesmo tempo em loop!
 });
+
+// =======================================================
+// ===== MENU MOBILE E BARRA DE PESQUISA =====
+// =======================================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. Funcionalidade do Menu Mobile
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNav = document.getElementById('mainNav');
+
+    if (mobileMenuBtn && mainNav) {
+        mobileMenuBtn.addEventListener('click', () => {
+            // Alterna (liga/desliga) a classe que mostra o menu
+            mainNav.classList.toggle('show-mobile-menu');
+        });
+    }
+
+    // 2. Funcionalidade da Barra de Pesquisa
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        // Escuta quando uma tecla for solta dentro do input
+        searchInput.addEventListener('keyup', (event) => {
+            // Verifica se a tecla pressionada foi o 'Enter'
+            if (event.key === 'Enter') {
+                const termoPesquisado = searchInput.value.trim();
+                
+                if (termoPesquisado !== '') {
+                    // Aqui você define o que a pesquisa faz. 
+                    // Exemplo 1: Exibir um alerta (para testar se está funcionando)
+                    alert('Você pesquisou por: ' + termoPesquisado);
+                    
+                    // Exemplo 2: Redirecionar para uma página de resultados (Descomente para usar)
+                    // window.location.href = `resultados.html?q=${encodeURIComponent(termoPesquisado)}`;
+                    
+                    // Limpa o campo após pesquisar
+                    searchInput.value = '';
+                }
+            }
+        });
+    }
+});

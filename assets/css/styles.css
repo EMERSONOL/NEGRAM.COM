@@ -103,8 +103,29 @@ main.container { padding-top: 100px; }
 .menu-btn { display: none; border: 0; background: transparent; font-size: 1.6rem; }
 
 @media (max-width: 900px) {
+  /* Esconde o menu por padrão no celular */
   .nav { display: none; }
-  .menu-btn { display: block; }
+  
+  /* Quando o botão for clicado, o JavaScript adicionará esta classe */
+  .nav.show-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Fica exatamente abaixo do cabeçalho */
+    left: 0;
+    width: 100%;
+    background:#fff; /* Mesma cor do seu cabeçalho atual */
+    padding: 20px 0;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  }
+    /* Ajustes dos links para mobile */
+  .nav.show-mobile-menu a {
+    width: 90%;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .menu-btn { display: block; cursor: pointer; }
   .search input { min-width: 140px; }
 }
 
