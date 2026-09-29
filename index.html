@@ -133,8 +133,8 @@ background-position: center; /* Centraliza a imagem */
     <div class="hero-dots-container">
         <!-- Adicione ou remova dots de acordo com a quantidade de slides -->
         <div class="hero-dot active" onclick="irParaHeroSlide(0)"></div>
+        <div class="hero-dot" onclick="irParaHeroSlide(1)"></div>
         <div class="hero-dot" onclick="irParaHeroSlide(2)"></div>
-    </div>
 </section>
 
 
@@ -296,7 +296,7 @@ background-position: center; /* Centraliza a imagem */
             </div>
         </div>
 
-        <div class="news-carousel-viewport">
+        <div id="news-viewport" class="news-carousel-viewport">
             <div class="news-carousel-container">
                 
                 <article class="news-card">
@@ -321,19 +321,6 @@ background-position: center; /* Centraliza a imagem */
                                 <span class="date">Mai 19, 2025</span>
                             </div>
                             <h4>NEGRAM NO ENANPUR 2025...</h4>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="news-card">
-                    <img src="assets\img\Biblioteca.jpg" alt="Biblioteca do NEGRAM">
-                    <div class="news-card-overlay">
-                        <div class="news-card-content">
-                            <div>
-                                <a href="biblioteca.html" class="tag">Acessar</a>
-                                <span class="date">Jan 01, 2025</span>
-                            </div>
-                            <h4>Biblioteca do NEGRAM</h4>
                         </div>
                     </div>
                 </article>
@@ -364,6 +351,20 @@ background-position: center; /* Centraliza a imagem */
                     </div>
                 </article>
 
+
+                <article class="news-card">
+                    <img src="assets\img\Biblioteca.jpg" alt="Biblioteca do NEGRAM">
+                    <div class="news-card-overlay">
+                        <div class="news-card-content">
+                            <div>
+                                <a href="biblioteca.html" class="tag">Acessar</a>
+                                <span class="date">Jan 01, 2025</span>
+                            </div>
+                            <h4>Biblioteca do NEGRAM</h4>
+                        </div>
+                    </div>
+                </article>
+                
             </div>
         </div>
     </div>
@@ -381,34 +382,43 @@ background-position: center; /* Centraliza a imagem */
         <p>Núcleo de Estudos e Pesquisas em Geografia, Relações Raciais e Movimentos Sociais</p>
       </div>
 
-      <!-- Coluna Central: Contato e Copyright -->
+      <!-- Coluna Central: Contato, Endereço e Logos das Instituições -->
       <div class="footer-col-center">
         <div class="footer-socials">
-          <!-- Link do Instagram Adicionado -->
           <a href="https://www.instagram.com/negram_ufrj" target="_blank" rel="noopener noreferrer"><img src="assets\img\RODAPÉ\logo instagram.png" alt="Instagram"></a>
-          <!-- Substitua # pelo seu endereço de email -->
           <a href="mailto:#"><img src="assets\img\RODAPÉ\logo email.png" alt="Email"></a>
         </div>
+        
         <div class="footer-contact">
-            <strong><br><br>ENDEREÇO:</strong>
+            <strong>ENDEREÇO:</strong>
             <p>Av. Horácio Macedo, 2151 – Cidade Universitária –<br>Ilha do Fundão – CEP: 21941-917 – Rio de Janeiro –<br>RJ – Brasil</p>
         </div>
-      </div>
-
-      <!-- Coluna Direita: Logos dos Patrocinadores -->
-      <div class="footer-col-right">
-        <div class="footer-logos">
-          <!-- Links dos Fornecedores Adicionados -->
+        
+        <!-- Logos Principais (UFRJ, IPPUR, ETTERN) -->
+        <div class="footer-logos-inst">
           <a href="https://www.instagram.com/ufrj.oficial" target="_blank" rel="noopener noreferrer"><img src="assets\img\RODAPÉ\logo.png" alt="Logo UFRJ"></a>
           <a href="https://www.instagram.com/ippur.ufrj" target="_blank" rel="noopener noreferrer"><img src="assets\img\RODAPÉ\Logo-IPPUR-Sem-fundo branco.png" alt="Logo IPPUR"></a>
           <a href="https://www.instagram.com/ettern_ippur" target="_blank" rel="noopener noreferrer"><img src="assets\img\RODAPÉ\png ettern.png" alt="Logo ETTERN"></a>
-          <a href="https://www.instagram.com/cnpq_oficial" target="_blank" rel="noopener noreferrer"><img src="assets\img\RODAPÉ\CNPq_v2017_rgb_neg.png" alt="Logo CNPq"></a>
-          <a href="https://www.instagram.com/capes_oficial" target="_blank" rel="noopener noreferrer"><img src="assets\img\RODAPÉ\capes branco.png" alt="Logo Capes"></a>
-          <a href="https://www.instagram.com/faperjoficial" target="_blank" rel="noopener noreferrer"><img src="assets\img\RODAPÉ\logo_faperj_branco_completo.png" alt="Logo FAPERJ"></a>
+        </div>
+
+        <!-- NOVO LOCAL DO COPYRIGHT: Fica agora perfeitamente alinhado abaixo das logos -->
+        <p class="footer-copyright">© 2025 NEGRAM</p>
+        
+      </div>
+
+      <!-- Coluna Direita: Apenas Apoios -->
+      <div class="footer-col-right">
+        <div class="apoios-container">
+          <h4 class="footer-title-apoio">APOIOS:</h4>
+          
+          <!-- Logos Apoios (2 por linha) -->
+          <div class="footer-logos-apoio">
+            <a href="https://www.instagram.com/cnpq_oficial" target="_blank" rel="noopener noreferrer"><img src="assets\img\RODAPÉ\CNPq_v2017_rgb_neg.png" alt="Logo CNPq"></a>
+            <a href="https://www.instagram.com/faperjoficial" target="_blank" rel="noopener noreferrer"><img src="assets\img\RODAPÉ\logo_faperj_branco_completo.png" alt="Logo FAPERJ"></a>
+            <a href="https://www.instagram.com/capes_oficial" target="_blank" rel="noopener noreferrer"><img src="assets\img\RODAPÉ\capes branco.png" alt="Logo Capes"></a>
+          </div>
         </div>
       </div>
-    </div>
-    <p class="footer-copyright">© 2025 NEGRAM</p>
   </footer>
 
 <!-- ==================================================
