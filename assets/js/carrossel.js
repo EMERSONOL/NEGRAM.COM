@@ -124,6 +124,9 @@ initCustomCarousel('projects-viewport', 'projects-prev-btn', 'projects-next-btn'
 // Inicializa o carrossel de Eixos
 initCustomCarousel('eixos-viewport', 'eixos-prev-btn', 'eixos-next-btn');
 
+// Inicializa o carrossel de Destaques
+initCustomCarousel('news-viewport', 'news-prev-btn', 'news-next-btn');
+
 // =======================================================
 // ===== CÓDIGO DO CARROSSEL DE STORIES (INSTAGRAM STYLE) =====
 // =======================================================
