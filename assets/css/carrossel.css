@@ -289,3 +289,7 @@
     font-size: 20px !important;
     font-weight: bold;
 }
+
+.news-card-content h4 {
+    font-size: 12px; /* Altere este valor (ex: 20px, 1.2rem, etc.) para o tamanho desejado */
+}
