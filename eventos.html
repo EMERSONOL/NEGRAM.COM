@@ -69,22 +69,19 @@
     </a>
 
     <!-- Links de Navegação -->
-    <nav id="mainNav" class="nav">
+    <nav class="nav">
       <a href="index.html">Início</a>
       <a href="sobre.html">Sobre</a>
       <a href="projetos.html">Projetos</a>
       <a href="biblioteca.html">Biblioteca</a>
-      <a href="eventos.html" class="active">Eventos</a>
+      <a href="eventos.html" class="active" >Eventos</a>
     </nav>
-    
     <!-- Ações adicionais (Pesquisa e Menu Mobile) -->
     <div class="nav-actions">
-      <!-- Adicionado id="searchInput" no input -->
-      <div class="search"><input id="searchInput" placeholder="Pesquisa" /></div>
-      <!-- Adicionado id="mobileMenuBtn" no button -->
-      <button id="mobileMenuBtn" class="menu-btn" aria-label="Abrir menu">☰</button>
+      <div class="search"><input placeholder="Pesquisa" /></div>
+      <button class="menu-btn" aria-label="Abrir menu">☰</button>
     </div>
-    </div>
+  </div>
 </header>
 
 <main>
@@ -109,12 +106,12 @@
         <div class="news-header">
             <h2>Destaques</h2>
             <div class="news-nav">
-                <button id="news-prev-btn" aria-label="Notícia Anterior">&lt;</button>
-                <button id="news-next-btn" aria-label="Próxima Notícia">&gt;</button>
+                <button id="destaqueseventos-prev" aria-label="Notícia Anterior">&lt;</button>
+                <button id="destaqueseventos-next" aria-label="Próxima Notícia">&gt;</button>
             </div>
         </div>
 
-        <div class="news-carousel-viewport">
+        <div class="news-carousel-viewport" id="destaqueseventos-viewport">
             <div class="news-carousel-container">
                 
                 <article class="news-card">
@@ -183,74 +180,67 @@
         <div class="news-header">
             <h2>JICTAC</h2>
             <div class="news-nav">
-                <button id="news-prev-btn" aria-label="Notícia Anterior">&lt;</button>
-                <button id="news-next-btn" aria-label="Próxima Notícia">&gt;</button>
+                <button id="jictac-prev" aria-label="Notícia Anterior">&lt;</button>
+                <button id="jictac-next" aria-label="Próxima Notícia">&gt;</button>
             </div>
         </div>
 
-        <div class="news-carousel-viewport">
+        <div class="news-carousel-viewport" id="jictac-viewport">
             <div class="news-carousel-container">
                 
+               		
                 <article class="news-card">
+                    <img src="assets\img\eventos\JICTAC Helissan Cavalcante.jpeg">
+                    <div class="news-card-overlay">
+                        <div class="news-card-content">
+                            <div>
+                                <a href="https://www.instagram.com/p/C5mDdIkJVw_/?img_index=1" class="tag">Acessar</a>
+                                <span class="date">Abr 10, 2024</span>
+                            </div>
+                            <h4>NOTAS SOBRE DIREITO À CIDADE EM ANGRA DOS REIS: UM PLANO TERRITORIAL PARA O QUILOMBO DO BRACUÍ</h4>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <img src="assets\img\eventos\JICTAC Emilyn.jpeg">
+                    <div class="news-card-overlay">
+                        <div class="news-card-content">
+                            <div>
+                                <a href="https://www.instagram.com/p/C5mDdIkJVw_/?img_index=2" class="tag">Acessar</a>
+                                <span class="date">Abr 10, 2024</span>
+                            </div>
+                            <h4>ATIVISMOS CARTOGRÁFICOS EM EXPERIÊNCIAS POPULARES DE PLANEJAMENTO URBANO EM SITUAÇÃO DE CONFLITO</h4>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <img src="assets\img\eventos\JICTAC Thais Silva.jpeg">
+                    <div class="news-card-overlay">
+                        <div class="news-card-content">
+                            <div>
+                                <a href="https://www.instagram.com/p/C5mDdIkJVw_/?img_index=3" class="tag">Acessar</a>
+                                <span class="date">Abr 10, 2024</span>
+                            </div>
+                            <h4>MORRO DA PROVIDÊNCIA: POR QUE NÃO PERTENCER À PEQUENA ÁFRICA? LEVANTAMENTO HISTÓRICO E CONFIGURAÇÃO DOS ATIVISMOS DO MORRO DA PROVIDÊNCIA COMO FORMA DE RECONHECIMENTO DA REGIÃO.</h4>
+                        </div>
+                    </div>
+                </article>
+
+		        <article class="news-card">
                     <img src="assets\img\eventos\jictac.jpg">
                     <div class="news-card-overlay">
                         <div class="news-card-content">
                             <div>
-                                <a href="/sua-pagina-de-negocios.html" class="tag">Acessar</a>
-                                <span class="date">Jan 01, 2024</span>
+                                <a href="https://www.instagram.com/p/C5mDdIkJVw_/?img_index=1" class="tag">Acessar</a>
+                                <span class="date">Abr 10, 2024</span>
                             </div>
                             <h4>CIRCUITOS E MEMÓRIAS NEGRAS NA PEQUENA ÁFRICA</h4>
                         </div>
                     </div>
                 </article>
                 
-                <div class="news-carousel-viewport">
-            <div class="news-carousel-container">
-                
-                <article class="news-card">
-                    <img src="assets\img\eventos\jictac.jpg">
-                    <div class="news-card-overlay">
-                        <div class="news-card-content">
-                            <div>
-                                <a href="/sua-pagina-de-negocios.html" class="tag">Acessar</a>
-                                <span class="date">Jan 01, 2024</span>
-                            </div>
-                            <h4>NOTAS SOBRE DIREITO À CIDADE EM ANGRA DOS REIS: UM ...</h4>
-                        </div>
-                    </div>
-                </article>
-
-                <div class="news-carousel-viewport">
-            <div class="news-carousel-container">
-                
-                <article class="news-card">
-                    <img src="assets\img\eventos\jictac.jpg">
-                    <div class="news-card-overlay">
-                        <div class="news-card-content">
-                            <div>
-                                <a href="/sua-pagina-de-negocios.html" class="tag">Acessar</a>
-                                <span class="date">Jan 01, 2024</span>
-                            </div>
-                            <h4>ATIVISMOS CARTOGRÁFICOS EM EXPERIÊNCIAS ...</h4>
-                        </div>
-                    </div>
-                </article>
-
-                <div class="news-carousel-viewport">
-            <div class="news-carousel-container">
-                
-                <article class="news-card">
-                    <img src="assets\img\eventos\jictac.jpg">
-                    <div class="news-card-overlay">
-                        <div class="news-card-content">
-                            <div>
-                                <a href="/sua-pagina-de-negocios.html" class="tag">Acessar</a>
-                                <span class="date">Jan 01, 2024</span>
-                            </div>
-                            <h4>MORRO DA PROVIDÊNCIA: POR QUE NÃO PERTENCER À ...</h4>
-                        </div>
-                    </div>
-                </article>
 
             </div>
         </div>
@@ -264,12 +254,12 @@
         <div class="news-header">
             <h2>SEMANA IPPUR</h2>
             <div class="news-nav">
-                <button id="news-prev-btn" aria-label="Notícia Anterior">&lt;</button>
-                <button id="news-next-btn" aria-label="Próxima Notícia">&gt;</button>
+                <button id="semanaippur-prev" aria-label="Notícia Anterior">&lt;</button>
+                <button id="semanaippur-next" aria-label="Próxima Notícia">&gt;</button>
             </div>
         </div>
 
-        <div class="news-carousel-viewport">
+        <div class="news-carousel-viewport" id="semanaippur-viewport">
             <div class="news-carousel-container">
                 
                 <article class="news-card">
@@ -323,12 +313,12 @@
         <div class="news-header">
             <h2>ENCONTRO ETTERN</h2>
             <div class="news-nav">
-                <button id="news-prev-btn" aria-label="Notícia Anterior">&lt;</button>
-                <button id="news-next-btn" aria-label="Próxima Notícia">&gt;</button>
+                <button id="ettern-prev" aria-label="Notícia Anterior">&lt;</button>
+                <button id="ettern-next" aria-label="Próxima Notícia">&gt;</button>
             </div>
         </div>
 
-        <div class="news-carousel-viewport">
+        <div class="news-carousel-viewport" id="ettern-viewport">
             <div class="news-carousel-container">
                 
                 <article class="news-card">
@@ -421,12 +411,12 @@
         <div class="news-header">
             <h2>SIAC</h2>
             <div class="news-nav">
-                <button id="news-prev-btn" aria-label="Notícia Anterior">&lt;</button>
-                <button id="news-next-btn" aria-label="Próxima Notícia">&gt;</button>
+                <button id="siac-prev" aria-label="Notícia Anterior">&lt;</button>
+                <button id="siac-next" aria-label="Próxima Notícia">&gt;</button>
             </div>
         </div>
 
-        <div class="news-carousel-viewport">
+        <div class="news-carousel-viewport" id="siac-viewport">
             <div class="news-carousel-container">
                 
                 <article class="news-card">
@@ -454,12 +444,12 @@
         <div class="news-header">
             <h2>TERREIROS DE QUILOMBO</h2>
             <div class="news-nav">
-                <button id="news-prev-btn" aria-label="Notícia Anterior">&lt;</button>
-                <button id="news-next-btn" aria-label="Próxima Notícia">&gt;</button>
+                <button id="quilombo-prev" aria-label="Notícia Anterior">&lt;</button>
+                <button id="quilombo-next" aria-label="Próxima Notícia">&gt;</button>
             </div>
         </div>
 
-        <div class="news-carousel-viewport">
+        <div class="news-carousel-viewport" id="quilombo-viewport">
             <div class="news-carousel-container">
                 
                 <article class="news-card">
@@ -487,12 +477,12 @@
         <div class="news-header">
             <h2>TERRITÓRIOS NEGROS</h2>
             <div class="news-nav">
-                <button id="news-prev-btn" aria-label="Notícia Anterior">&lt;</button>
-                <button id="news-next-btn" aria-label="Próxima Notícia">&gt;</button>
+                <button id="territorios-prev" aria-label="Notícia Anterior">&lt;</button>
+                <button id="territorios-next" aria-label="Próxima Notícia">&gt;</button>
             </div>
         </div>
 
-        <div class="news-carousel-viewport">
+        <div class="news-carousel-viewport" id="territorios-viewport">
             <div class="news-carousel-container">
                 
                 <article class="news-card">
@@ -520,12 +510,12 @@
         <div class="news-header">
             <h2>VI EIPLAN</h2>
             <div class="news-nav">
-                <button id="news-prev-btn" aria-label="Notícia Anterior">&lt;</button>
-                <button id="news-next-btn" aria-label="Próxima Notícia">&gt;</button>
+                <button id="eiplan-prev" aria-label="Notícia Anterior">&lt;</button>
+                <button id="eiplan-next" aria-label="Próxima Notícia">&gt;</button>
             </div>
         </div>
 
-        <div class="news-carousel-viewport">
+        <div class="news-carousel-viewport" id="eiplan-viewport">
             <div class="news-carousel-container">
                 
                 <article class="news-card">

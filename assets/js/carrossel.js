@@ -127,6 +127,17 @@ initCustomCarousel('eixos-viewport', 'eixos-prev-btn', 'eixos-next-btn');
 // Inicializa o carrossel de Destaques
 initCustomCarousel('news-viewport', 'news-prev-btn', 'news-next-btn');
 
+// Inicializa o carrossel de eventos
+initCustomCarousel('destaques-viewport', 'destaques-prev', 'destaques-next');
+initCustomCarousel('jictac-viewport', 'jictac-prev', 'jictac-next');
+initCustomCarousel('semanaippur-viewport', 'semanaippur-prev', 'semanaippur-next');
+initCustomCarousel('ettern-viewport', 'ettern-prev', 'ettern-next');
+initCustomCarousel('siac-viewport', 'siac-prev', 'siac-next');
+initCustomCarousel('quilombo-viewport', 'quilombo-prev', 'quilombo-next');
+initCustomCarousel('territorios-viewport', 'territorios-prev', 'territorios-next');
+initCustomCarousel('eiplan-viewport', 'eiplan-prev', 'eiplan-next');
+initCustomCarousel('destaqueseventos-viewport', 'destaqueseventos-prev', 'destaqueseventos-next');
+
 // =======================================================
 // ===== CÓDIGO DO CARROSSEL DE STORIES (INSTAGRAM STYLE) =====
 // =======================================================
