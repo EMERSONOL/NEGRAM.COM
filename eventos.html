@@ -69,21 +69,23 @@
     </a>
 
     <!-- Links de Navegação -->
-    <nav class="nav">
+    <nav id="mainNav" class="nav">
       <a href="index.html">Início</a>
       <a href="sobre.html">Sobre</a>
       <a href="projetos.html">Projetos</a>
       <a href="biblioteca.html">Biblioteca</a>
-      <a href="eventos.html" class="active" >Eventos</a>
+      <a href="eventos.html"class="active">Eventos</a>
     </nav>
+
     <!-- Ações adicionais (Pesquisa e Menu Mobile) -->
     <div class="nav-actions">
-      <div class="search"><input placeholder="Pesquisa" /></div>
-      <button class="menu-btn" aria-label="Abrir menu">☰</button>
+      <!-- Adicionado id="searchInput" no input -->
+      <div class="search"><input id="searchInput" placeholder="Pesquisa" /></div>
+      <!-- Adicionado id="mobileMenuBtn" no button -->
+      <button id="mobileMenuBtn" class="menu-btn" aria-label="Abrir menu">☰</button>
     </div>
-  </div>
+    </div>
 </header>
-
 <main>
 
   <!-- ==================================================
@@ -286,6 +288,20 @@
         <div class="news-carousel-viewport" id="semanaippur-viewport">
             <div class="news-carousel-container">
                 
+                <!-- ===== SEMANA IPPUR 2026==== -->
+                <article class="news-card">
+                    <img src="assets\img\eventos\SEMANA IPPUR 2026 Emerson João.jpeg">
+                    <div class="news-card-overlay">
+                        <div class="news-card-content">
+                            <div>
+                                <a href="/sua-pagina-de-negocios.html" class="tag">Acessar</a>
+                                <span class="date">Out 22, 2026</span>
+                            </div>
+                            <h4>CARTOGRAFIA RACIAIS: METODOLOGIA, ANÁLISES E DESAFIO TÉCICOS NA CONSTRUÇÃO DE UM REPOSITÓRIO CARTOGRÁFICO</h4>
+                        </div>
+                    </div>
+                </article>
+
                 <!-- ===== SEMANA IPPUR 2025==== -->
                 <article class="news-card">
                     <img src="assets\img\eventos\SEMANA IPPUR 2025 Emily.jpg">
