@@ -67,24 +67,21 @@
       <img src="assets\img\logo negram sf.png" alt="Logo NEGRAM" class="logo-img" />
       <div>Núcleo de Estudos e<br />Pesquisas em Geografia,<br />Relações Raciais e<br />Movimentos Sociais</div>
     </a>
-    <!-- Links de Navegação -->
-    <nav id="mainNav" class="nav">
+    <!-- Navegação Principal --> 
+    <nav class="nav">
       <a href="index.html">Início</a>
       <a href="sobre.html">Sobre</a>
-      <a href="projetos.html" class="active">Projetos</a>
+      <a href="projetos.html" class="active">Projetos</a> 
       <a href="biblioteca.html">Biblioteca</a>
       <a href="eventos.html">Eventos</a>
     </nav>
-    
-    <!-- Ações adicionais (Pesquisa e Menu Mobile) -->
     <div class="nav-actions">
-      <!-- Adicionado id="searchInput" no input -->
-      <div class="search"><input id="searchInput" placeholder="Pesquisa" /></div>
-      <!-- Adicionado id="mobileMenuBtn" no button -->
-      <button id="mobileMenuBtn" class="menu-btn" aria-label="Abrir menu">☰</button>
+      <div class="search"><input placeholder="Pesquisa"/></div>
+      <button class="menu-btn" aria-label="Abrir menu">☰</button>
     </div>
-    </div>
+  </div>
 </header>
+<main>
 
 <!-- ==================================================
     3. HERO - Seção de destaque com imagem e texto
@@ -112,93 +109,157 @@
         <div id="projects-viewport" class="news-carousel-viewport">
             <div class="news-carousel-container">
                 <article class="news-card">
-                    <img src="assets/img/projetos/Pequena África vs Porto Maravilha.jpg" alt="Imagem do projeto Pequena África vs Porto Maravilha">
+                    <img src="assets/img/projetos/raca-cidade.jpg" alt="Raça e cidade: as espacialidades das relações raciais, lutas negras e as políticas urbanas no Brasil">
                     <div class="news-card-overlay">
                         <div class="news-card-content">
-                            <h4>Pequena África vs Porto Maravilha</h4>
-                            <p>Disputas de lugar, resistências e memória na zona portuária do Rio de Janeiro.</p>
-                            <div class="card-actions">
-                                <a href="projeto-detalhe.html" class="tag">Ver Detalhes</a>
+                            <h4>Raça e cidade: as espacialidades das relações raciais, lutas negras e as políticas urbanas no Brasil</h4>
+                            <div>
+                                <button onclick="openPopup('Proj1')" class="tag" style="border:none; cursor:pointer;">Saiba Mais</button>
                             </div>
                         </div>
                     </div>
                 </article>
 
                 <article class="news-card">
-                    <img src="assets/img/projetos/Mapa de segregação racial.jpg" alt="Mapa de segregação racial">
+                    <img src="assets/img/projetos/segregacao.jpg" alt="Padrões de distribuição e segregação racial nas cidades brasileiras
+Descrição">
                     <div class="news-card-overlay">
                         <div class="news-card-content">
-                            <h4>Padrões de Segregação Racial nas Cidades</h4>
-                            <p>Mapas comparativos (2000–2022) para identificar padrões e dinâmicas espaciais.</p>
-                            <div class="card-actions">
-                                <a href="projeto-detalhe.html" class="tag">Ver Detalhes</a>
+                            <h4>Padrões de distribuição e segregação racial nas cidades brasileiras
+Descrição</h4>
+                            <div>
+                                <button onclick="openPopup('Proj2')" class="tag" style="border:none; cursor:pointer;">Saiba Mais</button>
                             </div>
                         </div>
                     </div>
                 </article>
 
                 <article class="news-card">
-                    <img src="assets/img/projetos/Angra dos Reis.jpg" alt="Imagem do projeto Plano Terreiros de Quilombo">
+                    <img src="assets/img/projetos/ativismos.jpg" alt="Ativismos cartográficos em experiências populares de planejamento urbano em situação de conflito">
                     <div class="news-card-overlay">
                         <div class="news-card-content">
-                            <h4>Plano Terreiros de Quilombo</h4>
-                            <p>Garantindo o direito à cidade em Santa Rita do Bracuí – Angra dos Reis.</p>
-                            <div class="card-actions">
-                                <a href="projeto-detalhe.html" class="tag">Ver Detalhes</a>
+                            <h4>Ativismos cartográficos em experiências populares de planejamento urbano em situação de conflito</h4>
+                            <div>
+                                <button onclick="openPopup('Proj3')" class="tag" style="border:none; cursor:pointer;">Saiba Mais</button>
                             </div>
                         </div>
                     </div>
                 </article>
 
                 <article class="news-card">
-                    <img src="assets/img/projetos/Pequena África vs Porto Maravilha.jpg" alt="Imagem do projeto Pequena África vs Porto Maravilha">
+                    <img src="assets/img/projetos/politicas.jpg" alt="Pequena África versus Porto Maravilha: disputas de lugar e resistências ao branqueamento do território">
                     <div class="news-card-overlay">
                         <div class="news-card-content">
-                            <h4>Pequena África vs Porto Maravilha</h4>
-                            <p>Disputas de lugar, resistências e memória na zona portuária do Rio de Janeiro.</p>
-                            <div class="card-actions">
-                                <a href="projeto-detalhe.html" class="tag">Ver Detalhes</a>
+                            <h4>Pequena África versus Porto Maravilha: disputas de lugar e resistências ao branqueamento do território</h4>
+                            <div>
+                                <button onclick="openPopup('Proj4')" class="tag" style="border:none; cursor:pointer;">Saiba Mais</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <img src="assets/img/projetos/territorios.jpg" alt="Plano Terreiros de Quilombo: o direito à cidade em Santa Rita do Bracuí, Angra dos Reis">
+                    <div class="news-card-overlay">
+                        <div class="news-card-content">
+                            <h4>Plano Terreiros de Quilombo: o direito à cidade em Santa Rita do Bracuí, Angra dos Reis</h4>
+                            <div>
+                                <button onclick="openPopup('Proj5')" class="tag" style="border:none; cursor:pointer;">Saiba Mais</button>
                             </div>
                         </div>
                     </div>
                 </article>
 
                 <article class="news-card">
-                    <img src="assets/img/projetos/Mapa de segregação racial.jpg" alt="Mapa de segregação racial">
+                    <img src="assets/img/projetos/providencia.jpg" alt="Censo Popular, Automapeamento e Cartografia Social do Morro da Providência: SOS Providência & projeto Morador Monitor">
                     <div class="news-card-overlay">
                         <div class="news-card-content">
-                            <h4>Padrões de Segregação Racial nas Cidades</h4>
-                            <p>Mapas comparativos (2000–2022) para identificar padrões e dinâmicas espaciais.</p>
-                            <div class="card-actions">
-                                <a href="projeto-detalhe.html" class="tag">Ver Detalhes</a>
+                            <h4>Censo Popular, Automapeamento e Cartografia Social do Morro da Providência: SOS Providência & projeto Morador Monitor</h4>
+                            <div>
+                                <button onclick="openPopup('Proj6')" class="tag" style="border:none; cursor:pointer;">Saiba Mais</button>
                             </div>
                         </div>
                     </div>
                 </article>
 
                 <article class="news-card">
-                    <img src="assets/img/projetos/Angra dos Reis.jpg" alt="Imagem do projeto Plano Terreiros de Quilombo">
+                    <img src="assets/img/projetos/africana.jpg" alt="Territórios Negros: Patrimônio e Educação na Pequena África do Rio de Janeiro">
                     <div class="news-card-overlay">
                         <div class="news-card-content">
-                            <h4>Plano Terreiros de Quilombo</h4>
-                            <p>Garantindo o direito à cidade em Santa Rita do Bracuí – Angra dos Reis.</p>
-                            <div class="card-actions">
-                                <a href="projeto-detalhe.html" class="tag">Ver Detalhes</a>
+                            <h4>Territórios Negros: Patrimônio e Educação na Pequena África do Rio de Janeiro</h4>
+                            <div>
+                                <button onclick="openPopup('Proj7')" class="tag" style="border:none; cursor:pointer;">Saiba Mais</button>
                             </div>
                         </div>
                     </div>
                 </article>
+
+                <article class="news-card">
+                    <img src="assets/img/projetos/southern.jpg" alt="Writing southern urbanism(s): Addressing publishing challenges for emergent voices in Urban studies in Brazil and South Africa">
+                    <div class="news-card-overlay">
+                        <div class="news-card-content">
+                            <h4>Writing southern urbanism(s): Addressing publishing challenges for emergent voices in Urban studies in Brazil and South Africa</h4>
+                            <div>
+                                <button onclick="openPopup('Proj8')" class="tag" style="border:none; cursor:pointer;">Saiba Mais</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+<!-- PROJETOS ANTIGOS (Apenas para a aba Projetos) -->
+                <article class="news-card">
+                    <img src="assets/img/Projetos/ProjAntigo1.jpg" alt="A Lei 10.639 e o Ensino de Geografia (2007-2018)">
+                    <div class="news-card-overlay">
+                        <div class="news-card-content">
+                            <h4>A Lei 10.639 e o Ensino de Geografia (2007-2018)</h4>
+                            <div>
+                                <button onclick="openPopup('ProjAntigo1')" class="tag" style="border:none; cursor:pointer;">Saiba Mais</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="assets/img/Projetos/ProjAntigo2.jpg" alt="Raça e Classe no Pré-Vestibular para Negros e Carentes">
+                    <div class="news-card-overlay">
+                        <div class="news-card-content">
+                            <h4>Raça e Classe no Pré-Vestibular para Negros e Carentes</h4>
+                            <div>
+                                <button onclick="openPopup('ProjAntigo2')" class="tag" style="border:none; cursor:pointer;">Saiba Mais</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="assets/img/Projetos/ProjAntigo3.jpg" alt="Curso de Formação de Professores em educação para as relações étnico-raciais (Lei 10.639/03) (2014-2015)">
+                    <div class="news-card-overlay">
+                        <div class="news-card-content">
+                            <h4>Curso de Formação de Professores em educação para as relações étnico-raciais (Lei 10.639/03) (2014-2015)</h4>
+                            <div>
+                                <button onclick="openPopup('ProjAntigo3')" class="tag" style="border:none; cursor:pointer;">Saiba Mais</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="assets/img/Projetos/ProjAntigo4.jpg" alt="Programa Políticas da Cor na Educação Brasileira (2003-2006)">
+                    <div class="news-card-overlay">
+                        <div class="news-card-content">
+                            <h4>Programa Políticas da Cor na Educação Brasileira (2003-2006)</h4>
+                            <div>
+                                <button onclick="openPopup('ProjAntigo4')" class="tag" style="border:none; cursor:pointer;">Saiba Mais</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </div>
     </div>
 </section>
                 
-                
-
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- ==================================================
      4. Eixos Negram - Seção de Eixos Temáticos
@@ -219,7 +280,7 @@
         <div id="eixos-viewport" class="news-carousel-viewport">
             <div class="news-carousel-container">
                 <article class="news-card">
-                    <img src="assets/img/Nova Pasta/Eixo1.jpeg" alt="Pequena África">
+                    <img src="assets/img/Projetos/Eixo1.jpeg" alt="Pequena África">
                     <div class="news-card-overlay">
                         <div class="news-card-content">
                             <div>
@@ -232,7 +293,7 @@
                 </article>
 
                 <article class="news-card">
-                    <img src="assets/img/Nova Pasta/Eixo2.jpeg" alt="Segregação Racial">
+                    <img src="assets/img/Projetos/Eixo2.jpeg" alt="Segregação Racial">
                     <div class="news-card-overlay">
                         <div class="news-card-content">
                             <div>
@@ -245,7 +306,7 @@
                 </article>
 
                 <article class="news-card">
-                    <img src="assets/img/Nova Pasta/Eixo3.jpeg" alt="Espaço e Sociabilidade do Corpo Negro">
+                    <img src="assets/img/Projetos/Eixo3.jpeg" alt="Espaço e Sociabilidade do Corpo Negro">
                     <div class="news-card-overlay">
                         <div class="news-card-content">
                             <div>
@@ -258,27 +319,28 @@
                 </article>
 
                 <article class="news-card">
-                    <img src="assets/img/Nova Pasta/Eixo5.jpeg" alt="Ativismos Cartográficos">
+                    <img src="assets/img/Projetos/Eixo5.jpeg" alt="Ativismos cartográficos em experiências populares de planejamento urbano em situação de conflito">
                     <div class="news-card-overlay">
                         <div class="news-card-content">
                             <div>
                                 <button onclick="openPopup('Eixo5')" class="tag">Ver mais</button>
                                 <span class="date">Jan 01, 2024</span>
                             </div>
-                            <h4>ATIVISMOS CARTOGRÁFICOS</h4>
+                            <h4>
+        Ativismos cartográficos em experiências populares de planejamento urbano em situação de conflito</h4>
                         </div>
                     </div>
                 </article>
 
                 <article class="news-card">
-                    <img src="assets/img/Nova Pasta/Eixo4.jpeg" alt="Territórios e Territorialidades">
+                    <img src="assets/img/Projetos/Eixo4.jpeg" alt="Plano Terreiros de Quilombo: o direito à cidade em Santa Rita do Bracuí, Angra dos Reis">
                     <div class="news-card-overlay">
                         <div class="news-card-content">
                             <div>
                                 <button onclick="openPopup('Eixo4')" class="tag">Ver mais</button>
                                 <span class="date">Jan 01, 2024</span>
                             </div>
-                            <h4>TERRITÓRIOS E TERRITORIALIDADES</h4>
+                            <h4>Plano Terreiros de Quilombo: o direito à cidade em Santa Rita do Bracuí, Angra dos Reis</h4>
                         </div>
                     </div>
                 </article>
