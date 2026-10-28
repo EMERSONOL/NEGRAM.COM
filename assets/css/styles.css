@@ -18,7 +18,7 @@
   --card: #ae5543;
   --line: #8b1a00;
   --radius: 8px;
-  --shadow: 0 6px 20px rgba(0, 0, 0, .2);
+  --shadow: 0 6px 20px #4a0d03;
   --text-light: #f6f3f2;
   --overlay-dark: rgba(108, 19, 5, 0.6);
 }
@@ -85,8 +85,9 @@ main.container { padding-top: 100px; }
    4. HEADER (Navegação)
    ================================================== */
 .site-header {
-  position: fixed; top: 0; left: 0; width: 100%; z-index: 40;
-  background: #fff; border-bottom: 1px solid var(--line);
+  position: fixed; top: 0; 
+  left: 0; width: 100%; z-index: 40;
+  background: #fff; 
   backdrop-filter: saturate(180%) blur(6px);
 }
 .navbar { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
@@ -118,7 +119,8 @@ main.container { padding-top: 100px; }
     padding: 20px 0;
     box-shadow: 0 10px 15px rgba(0,0,0,0.1);
   }
-    /* Ajustes dos links para mobile */
+
+  /* Ajustes dos links para mobile */
   .nav.show-mobile-menu a {
     width: 90%;
     text-align: center;
@@ -275,7 +277,7 @@ main.container { padding-top: 100px; }
   margin-top: 34px; padding: 50px 0 30px; position: relative; text-align: center;
   background-image: url('assets/img/Rodape.jpg'); background-size: cover; background-position: center; color: var(--text-light); 
 }
-.site-footer::before { content: ''; position: absolute; inset: 0; background-color: var(--brand-dark) !important; opacity: 0.85 !important; }
+.site-footer::before { content: ''; position: absolute; inset: 0; background-color: var(--brand-dark) !important; opacity: 0.7 !important; }
 
 .footer-inner { position: relative; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; align-items: flex-start; text-align: left; }
 .footer-col-left { display: flex; flex-direction: column; align-items: center; text-align: center; }
@@ -309,4 +311,69 @@ main.container { padding-top: 100px; }
   .footer-logos-apoio { justify-items: center; }
   .footer-contact { text-align: center; }
   .apoios-container { text-align: center; }
+}
+
+
+
+/* Limita o texto a 2 linhas e adiciona reticências */
+.texto-limitado {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 5px !important; /* Aproxima o texto do botão Ver mais */
+}
+
+/* Estilo do botão Ver mais */
+.btn-ver-mais {
+    color: var(--brand); /* Usa a cor vermelho escuro do seu tema */
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 15px; /* Mantém o espaçamento com o botão do Lattes */
+    transition: color 0.3s;
+}
+
+.btn-ver-mais:hover {
+    color: var(--brand-dark);
+    text-decoration: underline;
+}
+
+/* Estilos para o Ler mais embutido no texto */
+.btn-ler-mais-inline {
+    color: var(--brand);
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: 5px;
+    white-space: nowrap; /* Evita que o botão quebre para a linha de baixo sozinho */
+    transition: color 0.3s;
+}
+
+.btn-ler-mais-inline:hover {
+    color: var(--brand-dark);
+    text-decoration: underline;
+}
+
+.texto-oculto {
+    display: none;
+}
+
+/* Estilos para o crédito da mídia */
+.creditos-midia {
+    text-align: right;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #f6f3f2; /* Cor clara para leitura */
+}
+
+.creditos-midia a {
+    color: #ffffff;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.creditos-midia a:hover {
+    text-decoration: underline;
+    color: var(--brand); /* Usa a cor de destaque do seu tema */
 }
